@@ -1,0 +1,72 @@
+/* Reset Css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+/* 
+ --------- Quy trình -----------
+ 1. Đi từ ngoài vào trong
+ 2. Đi từ trên xuống dưới
+ 3. Đi từ tổng quan đến chi tiết
+*/
+
+/* 
+ --------- Phân tích 1 thành phần ---------
+1. Vị trí
+2. Kích thước
+3. Màu sắc
+4. Kiểu chữ
+*/
+
+#main {
+
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+}
+
+#nav {
+
+}
+
+#nav li {
+    display: inline-block;
+}
+
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+}
+
+#nav li:hover a {
+    color: #000;
+    background-color: #ccc;
+    display: inline-block;
+}
+
+#nav .subnav {
+    display: none;
+}
+
+#slider {
+
+}
+
+#conten {
+
+}
+
+#footer {
+
+}
