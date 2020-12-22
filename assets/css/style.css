@@ -25,31 +25,72 @@ html {
 4. Kiểu chữ
 */
 
+/* common */
+
+.row {
+    display: flex;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    margin: 0 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/* main */
+
 #main {
 
 }
 
 #header {
+    z-index: 1;
     height: 46px;
     background-color: #000;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 
 #nav {
 
 }
 
-#nav li {
+#nav > li {
     display: inline-block;
 }
 
-#nav li a {
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
     color: #fff;
+    text-transform: uppercase;
+    
+}
+
+#nav li a {
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
 }
 
-#nav li:hover a {
+#nav > li:hover > a,
+#nav .subnav li:hover a {
     color: #000;
     background-color: #ccc;
     display: inline-block;
@@ -57,16 +98,290 @@ html {
 
 #nav .subnav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    min-width: 160px;
+    box-shadow: 0 0 10px #00000047;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav a {
+    width: 100%;
+    color: #000;
+    padding: 0 16px;
+    line-height: 40px;
+}
+
+#nav .fa-sort-down {
+    color: #fff;
+    position: absolute;
+    right: 8%;
+    top: 24%;
+    cursor: pointer;
+}
+
+#header .fa-search {
+    color: #fff;
+    position: absolute;
+    font-size: 15px;
+    right: 0;
+    top: 0;
+    line-height: 46px;
+    display: block;
+    padding: 0 20px;
+}
+
+#header .fa-search:hover {
+    cursor: pointer;
+    background-color: #ccc;
 }
 
 #slider {
-
+    padding-top: 50%;
+    margin-top: 46px;
+    background-image: url(/w3-band/assets/img/slider/chicago.jpg);
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    position: relative;
 }
 
-#conten {
-
+#slider .text-content {
+    position: absolute;
+    bottom: 46px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
 }
 
+#slider .text-heading {
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+#slider .text-description {
+    font-size: 15px;
+}
+
+#content {
+    
+}
+
+#content .content-section {
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 0;
+}
+
+#content .content-section .section-heading {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+#content .content-section .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    margin-top: 25px;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .member-list {
+    display: flex;
+}
+
+#content .member-item {
+    padding-top: 48px;
+    flex: calc(100% /3);
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-avt {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 5px;
+}
+
+#content .tour-section {
+    background-color: #000;
+}
+
+#content .tour-section .content-section {
+    color: #fff;
+}
+
+#content .tickets-list {
+    margin-top: 40px;
+    background-color: #fff;
+}
+
+#content .tickets-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    list-style: none;
+}
+
+#content .tickets-list .sold-out {
+    background: #f44336;
+    color: #fff;
+    margin-left: 16px;
+    padding: 4px 8px;
+}
+
+#content .tickets-list .quantity {
+    float: right;
+    background: #333;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+/* Places */
+.places-list {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.places-item {
+    width: calc(100% /3);
+    background: #fff;
+}
+
+.places-img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.places-item img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    color: #000;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.places-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-text {
+    margin-top: 15px;    
+    line-height: 1.4;
+}
+
+.places-buy-btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: 0.5s;
+}
+
+.places-buy-btn:hover {
+    background-color: #ccc;
+}
+/* end places */
+
+
+
+/* contact */
+.contact-footer {
+    margin-top: 40px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact-info p {
+    padding-bottom: 5px;
+}
+
+.contact-info p:last-child {
+    padding-bottom: 0;
+}
+
+.contact-info i[class*="fas"] {
+    width: 40px;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .input-messege {
+    margin-top: 12px;
+}
+
+.contact-form .form-submit-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 17px;
+    outline: none;
+    float: right;
+    cursor: pointer;
+}
+
+.contact-form .form-submit-btn:active {
+    border: 2px solid #000;
+    border-radius: 3px;
+}
+
+.contact-form .form-submit-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* end-contact */
+
+
+
+/* footer */
 #footer {
 
 }
+/* end footer */
