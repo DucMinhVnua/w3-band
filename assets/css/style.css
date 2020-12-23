@@ -7,7 +7,8 @@
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* 
@@ -179,6 +180,7 @@ html {
     width: 800px;
     margin: 0 auto;
     padding: 64px 0;
+    max-width: 100%;
 }
 
 #content .content-section .section-heading {
@@ -265,7 +267,6 @@ html {
 /* Places */
 .places-list {
     margin-top: 40px;
-    margin-bottom: 40px;
 }
 
 .places-item {
@@ -364,6 +365,7 @@ html {
     outline: none;
     float: right;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .contact-form .form-submit-btn:active {
@@ -379,9 +381,87 @@ html {
 /* end-contact */
 
 
+/* content-map */
+
+.map-section {
+    padding-top: 50%;
+    background-image: url(/w3-band/assets/img/map.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* 
+.map-section img {
+    width: 100%;
+} */
+
+/* end content-map */
+
 
 /* footer */
 #footer {
+    padding: 64px 16px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#footer .icon-list {
 
 }
-/* end footer */
+
+#footer .icon-list a {
+    color: #797474;
+    transition: 0.6s;
+}
+
+#footer .icon-list a:hover {
+    color: #a8a2a2;
+}
+
+#footer .copy-right {
+    font-size: 15px;
+    margin: 15px 0;
+    color: #797474;
+}
+
+/* End footer *
+
+
+/* responsive */
+
+/* ---------- Quy ước ---------- */
+/* 
+1. PC ( >=1024px );
+2. Tablet ( <1024px and >=740px )
+3. Mobile ( <740px )
+
+/* PC */
+@media (min-width: 1024px) {
+    
+}
+/* End PC */
+
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .contact-form .form-submit-btn {
+        margin-right: 8px;
+    }
+
+    #content .content-section h2, #content .content-section p {
+        padding: 0 15px;
+    } 
+}
+/* End tablet */
+
+/* Mobile */
+@media (max-width: 739px) {
+    
+}
+/* End mobile */
+
+/* End responsive */
