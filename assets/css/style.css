@@ -127,7 +127,7 @@ html {
     cursor: pointer;
 }
 
-#header .fa-search {
+#header .fa-search, #header .fa-bars {
     color: #fff;
     position: absolute;
     font-size: 15px;
@@ -138,15 +138,24 @@ html {
     padding: 0 20px;
 }
 
+#header .fa-bars {
+    display: none;
+}
+
 #header .fa-search:hover {
     cursor: pointer;
     background-color: #ccc;
 }
 
+#header .fa-bars:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
 #slider {
     padding-top: 50%;
     margin-top: 46px;
-    background-image: url(/w3-band/assets/img/slider/chicago.jpg);
+    background-image: url(../img/slider/chicago.jpg);
     background-origin: padding-box;
     background-repeat: no-repeat;
     background-position: center;
@@ -385,7 +394,7 @@ html {
 
 .map-section {
     padding-top: 50%;
-    background-image: url(/w3-band/assets/img/map.jpg);
+    background-image: url(../img/map.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -424,44 +433,3 @@ html {
 }
 
 /* End footer *
-
-
-/* responsive */
-
-/* ---------- Quy ước ---------- */
-/* 
-1. PC ( >=1024px );
-2. Tablet ( <1024px and >=740px )
-3. Mobile ( <740px )
-
-/* PC */
-@media (min-width: 1024px) {
-    
-}
-/* End PC */
-
-
-/* Tablet */
-@media (min-width: 740px) and (max-width: 1023px) {
-    .row {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    
-    .contact-form .form-submit-btn {
-        margin-right: 8px;
-    }
-
-    #content .content-section h2, #content .content-section p {
-        padding: 0 15px;
-    } 
-}
-/* End tablet */
-
-/* Mobile */
-@media (max-width: 739px) {
-    
-}
-/* End mobile */
-
-/* End responsive */

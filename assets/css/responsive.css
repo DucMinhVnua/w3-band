@@ -1,0 +1,61 @@
+/* responsive */
+
+/* ---------- Quy ước ---------- */
+/* 
+1. PC ( >=1024px );
+2. Tablet ( <1024px and >=740px )
+3. Mobile ( <740px )
+
+/* PC */
+@media (min-width: 1024px) {
+    
+}
+/* End PC */
+
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .contact-form .form-submit-btn {
+        margin-right: 8px;
+    }
+
+    #content .content-section h2, #content .content-section p {
+        padding: 0 15px;
+    } 
+}
+/* End tablet */
+
+/* Mobile */
+@media (max-width: 739px) {
+    #nav li:nth-child() {
+        display: inline-block;
+    }
+
+    #nav li:hover {
+        background-color: #ccc;
+    }
+
+    #nav > li {
+        display: block;
+    }
+
+    #header {
+        overflow: hidden;
+    }
+
+    #header .fa-search {
+        display: none;
+    }
+
+    #header .fa-bars {
+        display: block;
+    }
+}
+/* End mobile */
+
+/* End responsive */
