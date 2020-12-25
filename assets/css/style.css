@@ -336,19 +336,28 @@ html {
 }
 
 .contact-info {
+    font-style: italic;
+    color: #DDD;
+    text-align: center;
     font-size: 18px;
     line-height: 1.4;
 }
 
-.contact-info p {
+.contact-form-left {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.4; 
+}
+
+.contact-form-left p {
     padding-bottom: 5px;
 }
 
-.contact-info p:last-child {
+.contact-form-left p:last-child {
     padding-bottom: 0;
 }
 
-.contact-info i[class*="fas"] {
+.contact-form-left i[class*="fas"] {
     width: 40px;
 }
 
