@@ -7,31 +7,51 @@
 3. Mobile ( <740px )
 
 /* PC */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
     
 }
 /* End PC */
 
+/* mobile-tablet */
+@media (max-width: 63.9375em) {
+    #footer .icon-list {
+        font-size: 40px;
+    }
+
+    #footer .icon-list a {
+        padding: 0 5px;
+    }
+}
+
+/* end mobile-tablet */
 
 /* Tablet */
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 46.25empx) and (max-width: 63.9375em) {
     .row {
         margin-left: 0px;
         margin-right: 0px;
+    }
+
+    #content .about-text {
+        padding: 0 15px;
     }
     
     .contact-form .form-submit-btn {
         margin-right: 8px;
     }
 
-    #content .content-section h2, #content .content-section p {
+    #content .content-section h2{
         padding: 0 15px;
-    } 
+    }
+
+    .place-body p {
+        padding: 0;
+    }
 }
 /* End tablet */
 
 /* Mobile */
-@media (max-width: 739px) {
+@media (max-width: 46.1875em) {
     .row {
         margin-left: 0px;
         margin-right: 0px;
@@ -124,6 +144,12 @@
 
     .place-text {
         padding: 0;
+    }
+
+    .places-buy-btn {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
     }
 
     .contact-form-left p {

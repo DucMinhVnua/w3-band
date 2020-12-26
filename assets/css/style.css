@@ -169,6 +169,7 @@ html {
     width: 100%;
     color: #fff;
     text-align: center;
+    text-shadow: 0 0 2px #000;
 }
 
 #slider .text-heading {
@@ -353,6 +354,15 @@ html {
     padding-bottom: 5px;
 }
 
+.contact-form-left a {
+    color: #0000f0;
+    opacity: .7;
+}
+
+.contact-form-left a:hover {
+    opacity: 1;
+}
+
 .contact-form-left p:last-child {
     padding-bottom: 0;
 }
@@ -384,6 +394,7 @@ html {
     float: right;
     cursor: pointer;
     transition: 0.5s;
+    -webkit-appearance: none;
 }
 
 .contact-form .form-submit-btn:active {
